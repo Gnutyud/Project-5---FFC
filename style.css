@@ -1,0 +1,226 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+ :root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: var(--main-red);
+    border-bottom: 2px solid black;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-item a {
+    color: var(--main-white);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    display: block;
+    padding: 25px 40px;
+    text-align: center;
+    transition: background-color 0.5s linear;
+}
+
+.navbar-item a:hover {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.header-title {
+    background-color: var(--main-gray);
+    height: 100vh;
+    width: 100%;
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-title h1,
+.contact h2 {
+    font-size: 60px;
+    color: var(--main-white);
+    font-weight: 600;
+}
+
+.header-title p,
+.contact p {
+    color: var(--main-red);
+    font-size: 30px;
+    font-weight: 200;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.project-section {
+    background-color: var(--main-blue);
+    width: 100%;
+    padding: 100px 20px;
+    border-top: 2px solid black;
+}
+
+.project-section h2 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 70px;
+    color: var(--main-white);
+}
+
+.project-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-gray);
+    border-radius: 5px;
+}
+
+.project-title {
+    font-size: 20px;
+    color: var(--main-white);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 430px 430px;
+    grid-gap: 40px;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .project-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-img {
+    object-fit: cover;
+    width: 100%;
+    height: calc(100% - 70px);
+}
+
+.code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-in-out;
+}
+
+.project-item:hover .code {
+    color: orangered;
+}
+
+.btn {
+    font-size: 20px;
+    color: var(--main-white);
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 60px;
+    background-color: var(--main-gray);
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    transition: background-color 0.4s linear;
+}
+
+.btn span {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    transform: translateX(0);
+    transition: transform 0.5s linear;
+}
+
+.btn:hover {
+    background-color: var(--main-red);
+}
+
+.btn:hover span {
+    transform: translateX(5px);
+}
+
+.contact {
+    background-color: var(--main-gray);
+    padding-top: 140px;
+    padding-bottom: 70px;
+    text-align: center;
+    height: 95vh;
+}
+
+.contact p {
+    padding-bottom: 60px;
+}
+
+.contact-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 140px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid var(--main-red);
+}
+
+.contact-item {
+    margin-left: 40px;
+    font-size: 25px;
+    font-weight: 500;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0);
+}
+
+.contact-item:hover {
+    transform: translateY(10px);
+}
+
+.contact-item i {
+    margin-right: 5px;
+}
+
+.copyright {
+    font-size: 20px;
+    color: inherit;
+    float: right;
+    margin-right: 20px;
+    color: var(--main-white);
+}
